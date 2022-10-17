@@ -1,8 +1,118 @@
 @font-face {
-  font-family: 'norsebold';
-  src: url('norse-bold-webfont.woff2') format('woff2'),
-       url('norse-bold-webfont.woff') format('woff');
+  font-family: "norsebold";
+  src: url("norse-bold-webfont.woff2") format("woff2"),
+    url("norse-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
+
+/******************
+    RESET
+******************/
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+em,
+img,
+strong,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+footer,
+header,
+output {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+footer,
+header {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+/******************
+    MAIN
+******************/
+
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left-side {
+  background-color: blue;
+  flex: 0 1 0;
+  min-width: 540px;
+}
+
+.right-side {
+  background-color: lightgray;
+  flex: 2 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: aquamarine;
+  flex: 1 1 0;
+}
+
+form {
+  background-color: bisque;
+  flex: 1 1 10%;
+}
+
+footer {
+  background-color: plum;
+  flex: 1 1 0;
+}
+
+@media only screen and (max-width: 1080px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left-side {
+    height: 100vh;
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .right-side {
+    height: 100vh;
+    flex: 0 0 auto;
+  }
+}
+
+/******************
+   REVEIW FLEXBOX LAYOUTS
+******************/
