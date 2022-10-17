@@ -1,7 +1,7 @@
 @font-face {
   font-family: "norsebold";
-  src: url("norse-bold-webfont.woff2") format("woff2"),
-    url("norse-bold-webfont.woff") format("woff");
+  src: url("fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("fonts/norse-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -60,39 +60,98 @@ ul {
 }
 
 /******************
+    VARIABLES
+******************/
+
+html {
+  --color-light-grey: rgb(250, 250, 250);
+  --color-form-grey: rgb(255,255,255);
+  --color-shadow-grey: rgb(225, 225, 225);
+}
+
+/******************
     MAIN
 ******************/
 
 body {
   display: flex;
   min-height: 100vh;
+  background-color: var(--color-light-grey);
 }
 
 .left-side {
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   flex: 0 1 0;
   min-width: 540px;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, .4);
+  margin-top: 192px;
+  height: 15%;
+  width: 100%;
+}
+
+.odin-icon {
+  max-width: 100%;
+  max-height: 90%;
+}
+
+h1 {
+  font-family: "norsebold";
+  font-size:  5.5em;
+
+}
+
+h1,
+.caption {
+  color: white;
+}
+
+.caption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .75em;
+  margin-bottom: 10px;
+}
+
+.caption,
+.caption > a {
+  color: white;
+  opacity: .9;
+}
+
+.caption > a {
+  
+}
+
+
 .right-side {
-  background-color: lightgray;
   flex: 2 1 0;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  background-color: aquamarine;
   flex: 1 1 0;
 }
 
 form {
-  background-color: bisque;
+  background-color: var(--color-form-grey);
+  box-shadow: 0 10px 5px -5px var(--color-shadow-grey);
   flex: 1 1 10%;
 }
 
 footer {
-  background-color: plum;
   flex: 1 1 0;
 }
 
