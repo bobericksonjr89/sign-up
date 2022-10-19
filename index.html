@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="left-side">
@@ -32,8 +33,42 @@
         <p class="p2">Sign up <em>now</em> to get started.</p>
         <p class="p3">You <em>know</em> you want to.</p>
       </section>
-      <form action=""></form>
-      <footer></footer>
+      <form action="" id="form">
+        <h2>Let's do this!</h2>
+        <div class="form">
+          <div class="form-control">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" required />
+          </div>
+          <div class="form-control">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" required />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="form-control">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" required />
+          </div>
+          <div class="form-control">
+            <label for="pwd">Password</label>
+            <input type="password" name="pwd" id="pwd" required />
+            <output for="pwd"></output>
+          </div>
+          <div class="form-control">
+            <label for="pwd2">Confirm Password</label>
+            <input type="password" name="pwd2" id="pwd2" required />
+          </div>
+        </div>
+      </form>
+      <footer>
+        <button type="submit" form="form">Create Account</button>
+        <p class="footer-text">
+          Already have an account? <a href="">Log in</a>
+        </p>
+      </footer>
     </div>
   </body>
 </html>
